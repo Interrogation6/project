@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Detalhe Prata</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans&amp;family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css"
+        integrity="sha512-apX8rFN/KxJW8rniQbkvzrshQ3KvyEH+4szT3Sno5svdr6E/CP0QE862yEeLBMUnCqLko8QaugGkzvWS7uNfFQ=="
+        crossorigin="anonymous">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <th:block th:replace="components/navbar :: navbar"/>
+    <div class="bg-slate-50 w-full">
+        <div style="background-image: url('https://placehold.co/1400x400/cccccc/666666');" class="h-96 relative">
+            <div class="bg-black absolute inset-0 bg-opacity-30"></div>
+            <div class="justify-center items-center text-center text-white absolute inset-0 flex flex-col">
+                <p class="text-5xl mb-4 font-serif">Peças Únicas</p>
+                <p class="text-lg mb-8">DESIGNS SOFISTICADOS PARA MOMENTOS ESPECIAIS</p>
+                <button type="submit" class="hover:bg-gray-800 bg-black px-8 py-3 text-white">Explorar Coleção</button>
+            </div>
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <div class="w-2 h-2 bg-white rounded-full"></div>
+                <div class="w-8 h-2 bg-white rounded-full"></div>
+                <div class="w-2 h-2 bg-white rounded-full"></div>
+            </div>
+        </div>
+        <div class="mx-auto px-4 py-16 max-w-7xl">
+            <p class="text-3xl text-center mb-12 text-gray-900 font-serif">NOVIDADES</p>
+            <div class="grid grid-cols-4 gap-6">
+                <div class="bg-white">
+                    <img alt="Produto 1" src="https://placehold.co/300x300/f0f0f0/999999"
+                        class="object-cover w-full h-72">
+                </div>
+                <div class="bg-white">
+                    <img alt="Produto 2" src="https://placehold.co/300x300/e8e8e8/777777"
+                        class="object-cover w-full h-72">
+                </div>
+                <div class="bg-white">
+                    <img alt="Produto 3" src="https://placehold.co/300x300/d0d0d0/555555"
+                        class="object-cover w-full h-72">
+                </div>
+                <div class="bg-white relative">
+                    <div class="bg-blue-600 text-white px-3 py-1 text-sm absolute top-4 right-4">OFERTA</div>
+                    <img alt="Produto 4" src="https://placehold.co/300x300/c8c8c8/444444"
+                        class="object-cover w-full h-72">
+                </div>
+            </div>
+        </div>
+    </div>
+    <th:block th:replace="components/sidebar :: sidebar"/>
+    
+    <script>
+    const btn = document.querySelector(".mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+
+    btn?.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+    });
+    </script>
+</body>
+</html>
