@@ -40,8 +40,11 @@
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('mobileSidebar');
+            const sidebarContent = document.getElementById('mobileSidebarDescription');
             sidebar.classList.toggle('-translate-x-full'); // Hides it
+            sidebarContent.classList.toggle('-translate-x-full');
             sidebar.classList.toggle('translate-x-0');     // Shows it
+            sidebarContent.classList.toggle('translate-x-0');
         }
     </script>
 </th:block>
